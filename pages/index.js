@@ -10,13 +10,13 @@ export default function Home({ posts }) {
   return (
     <div className="container">
       <Head>
-        <title>Headless WP Next Starter</title>
+        <title>Blogs</title>
         <link rel="icon" href="favicon.ico"></link>
       </Head>
 
       <main>
         <h1 className="title">
-          Headless WordPress Next.js Starter
+          Blogs
         </h1>
 
         <p className="description">
@@ -60,6 +60,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts
-    }
+    },
+    revalidate: 1,
   }
 }

@@ -23,11 +23,13 @@ console.log(post);
         </article>
       </main>
 
+
+
       <Footer></Footer>
 
-    </div>
-  )
-}
+    </div> 
+  ) 
+}  
 
 
 export async function getStaticProps({ params }) {
@@ -59,7 +61,10 @@ export async function getStaticProps({ params }) {
     props: {
       post
     }
+    ,
+    revalidate: 1,
   }
+  
 }
 
 export async function getStaticPaths(){
