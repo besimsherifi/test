@@ -6,7 +6,6 @@ import { gql } from '@apollo/client';
 
 
 export default function Home({ posts }) {
-  // console.log(posts);
   return (
     <div className="container">
       <Head>
