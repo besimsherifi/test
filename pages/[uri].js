@@ -4,7 +4,6 @@ import { client } from '../lib/apollo'
 import { gql } from '@apollo/client';
 
 export default function SlugPage({ post }) {
-console.log(post);
   return (
     <div>
       <Head>
@@ -17,7 +16,7 @@ console.log(post);
           <h1 className="title">
             {post.title}
           </h1>
-          <p>✍️  &nbsp;&nbsp;{`${post.author.node.firstName} ${post.author.node.lastName}`} | 🗓️ &nbsp;&nbsp;{new Date(post.date).toLocaleDateString()}</p>
+          <p>✍️  &nbsp;&nbsp;{`${post?.author?.node?.firstName} ${post?.author?.node?.lastName}`} | 🗓️ &nbsp;&nbsp;{new Date(post?.date).toLocaleDateString()}</p>
         </div>
         <article dangerouslySetInnerHTML={{ __html: post.content }}>
         </article>

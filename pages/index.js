@@ -27,7 +27,7 @@ export default function Home({ posts }) {
           {
             posts.map((post) => {
               return (
-                <PostCard key={post.uri} post={post}></PostCard>
+                <PostCard key={post?.uri} post={post}></PostCard>
               )
             })
           }
