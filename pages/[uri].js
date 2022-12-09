@@ -4,6 +4,7 @@ import { client } from '../lib/apollo'
 import { gql } from '@apollo/client';
 
 export default function SlugPage({ post }) {
+  console.log(post);
   return (
     <div>
       <Head>
